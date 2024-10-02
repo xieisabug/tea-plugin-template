@@ -27,7 +27,7 @@ export default defineConfig({
 					'react-dom': 'ReactDOM'
 				},
 				entryFileNames: 'main.js',
-				format: 'es',
+				format: 'umd',
 			},
 		},
 	},
