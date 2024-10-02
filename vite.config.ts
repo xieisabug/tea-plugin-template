@@ -17,10 +17,15 @@ export default defineConfig({
 			entry: resolve(__dirname, 'src/main.tsx'),
 			name: 'SamplePlugin',
 			fileName: 'main',
-			formats: ['es']
+			formats: ['umd']
 		},
 		rollupOptions: {
+			external: ['react', 'react-dom'],
 			output: {
+				globals: {
+					react: 'React',
+					'react-dom': 'ReactDOM'
+				},
 				entryFileNames: 'main.js',
 				format: 'es',
 			},
